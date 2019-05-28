@@ -1,0 +1,48 @@
+/* ----------------------------- *\
+|             $TIPOGRAFIA             |
+\* ----------------------------- */
+
+p {
+  font-size: map-get($fs, normal);
+}
+
+.sticky {
+  z-index: map-get($zindex, zindex-sticky);
+}
+
+// CONTROLES DE FLUJO
+// Definicion de una lista $font-weights con los valores separados por espacio
+$font-weights: normal bold italic;
+
+// Uso de la directiva @each para usar el ciclo each
+@each $font in ($font-weights) {
+  // Se crea una clase por cada valor de la variable $font en la lista
+  .#{$font} {
+    font-weight: $font;
+  }
+}
+
+// directiva @for para crear un loop for con la variable $i incrementando de 1 desde 1 hasta 5
+@for $i from 1 to 5 {
+  // for genera 4 clases-$i con diferente contenido
+  .class-#{$i} {
+    // Anidacion y uso de & para generar pseudoclase
+    &:before {
+      // uso de variable del loop for como parte de un string
+      content: "#{$i}";
+    }
+  }
+}
+
+// directiva @if para crear una condicional
+p {
+  color: black;
+}
+// variable
+$background-color: black;
+// variable $background-color con condicional if
+@if $background-color == black {
+  p {
+    color: white;
+  }
+}

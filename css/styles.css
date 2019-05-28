@@ -1,0 +1,103 @@
+/* ----------------------------- *\
+|             $COLORS             |
+\* ----------------------------- */
+/*-------Branding colors */
+/* ----------------------------- *\
+|             $MIXINS             |
+\* ----------------------------- */
+section {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: blue;
+  background-color: #b3b3b3;
+  padding: 24px; }
+  @media only screen and (min-width: 800px) {
+    section {
+      background-color: red; } }
+
+.max-width--huge {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto; }
+
+header {
+  background-color: #ea83ee; }
+
+.section, .container {
+  max-width: 80%;
+  margin-right: 0;
+  margin-left: 0; }
+
+h1 {
+  color: #25b0b6; }
+
+.div {
+  padding: 15px; }
+
+p {
+  font-size: 16px; }
+
+small {
+  font-size: 12px; }
+
+table tr:hover {
+  background-color: #dbd879; }
+
+/* ----------------------------- *\
+|             $BOTTONS             |
+\* ----------------------------- */
+.btn {
+  display: inline-block;
+  color: white;
+  background-color: #ea83ee;
+  line-height: 2.5;
+  border-radius: 3px;
+  font-size: 24px; }
+  .btn__icon {
+    font-size: .6em; }
+  .btn.btn--info {
+    background-color: #42b8dd; }
+
+/* ----------------------------- *\
+|             $TIPOGRAFIA             |
+\* ----------------------------- */
+p {
+  font-size: 16px; }
+
+.sticky {
+  z-index: 120; }
+
+.normal {
+  font-weight: normal; }
+
+.bold {
+  font-weight: bold; }
+
+.italic {
+  font-weight: italic; }
+
+.class-1:before {
+  content: "1"; }
+
+.class-2:before {
+  content: "2"; }
+
+.class-3:before {
+  content: "3"; }
+
+.class-4:before {
+  content: "4"; }
+
+p {
+  color: black; }
+
+p {
+  color: white; }
+
+/* ----------------------------- *\
+|             $GRIDS             |
+\* ----------------------------- */
+/* ----------------------------- *\
+|             $UTILITIES             |
+\* ----------------------------- */

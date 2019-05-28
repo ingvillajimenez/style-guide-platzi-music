@@ -1,0 +1,48 @@
+/* ----------------------------- *\
+|             $BOTTONS             |
+\* ----------------------------- */
+// .btn {
+//   display: inline-block;
+//   color: $buttoncolor;
+//   background-color: $buttonbackgroundcolor;
+//   line-height: 2.5;
+//   border-radius: $border-radius;
+//   font-size: $buttonfontsize;
+// }
+
+// BEM (Block Element Modifier)
+// B: .btn
+//     E
+// M
+
+  // Anidacion para definir que esto es un elemento
+  // .btn__icon {
+  //   font-size: .6em;
+  // }
+
+  // Anidacion para definir que esto es un modificador
+  // .btn--info {
+  //   background-color: $color-info;
+  // }
+
+  // Anidaciones (Sass feature) y BEM
+  .btn {
+    display: inline-block;
+    color: $buttoncolor;
+    background-color: $buttonbackgroundcolor;
+    line-height: 2.5;
+    border-radius: $border-radius;
+    font-size: $buttonfontsize;
+    
+      // Anidacion para definir que esto es un elemento
+      // & representa al padre
+    &__icon {
+      font-size: .6em;
+    }
+  
+    // Anidacion para definir que esto es un modificador
+    // & representa al padre
+    &.btn--info {
+      background-color: $color-info;
+    }
+  }

@@ -1,0 +1,17 @@
+/* ----------------------------- *\
+|             $MIXINS             |
+\* ----------------------------- */
+
+@mixin max-width($maxwidth: $page-max-width) {
+  max-width: $maxwidth;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin respond-to($width) {
+  // Breakpoint del responsive con @media
+  @media only screen and (min-width: $width) {
+    // Directiva @content incluye un bloque de contenido dentro de un mixin
+    @content;
+  }
+}

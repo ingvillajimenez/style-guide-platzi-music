@@ -1,0 +1,71 @@
+// INCLUYENDO MIXINS
+section {
+  @include max-width;
+  background-color: blue;
+  // Se llama al mixin respond-to agregando contenido
+  @include respond-to(800px){
+    background-color: red;
+  }
+  background-color: $color-lightgrey;
+  padding: $padding;
+}
+
+// Esto es un modifier porque huge es una variacion de max-width
+.max-width--huge {
+  @include max-width(80%);
+}
+
+header {
+  background-color: $color-brand;
+}
+
+// EXTEND
+// Placeholder %max-width (no es una clase) contiene un conjunto de propiedades
+%max-width {
+  max-width: 80%;
+  margin-right: 0;
+  margin-left: 0;
+}
+$color-grey: #737373;
+.section {
+  // cuando se extiende el placeholder con % no repite propiedades en css
+  @extend %max-width;
+}
+
+.container {
+    // cuando se extiende el placeholder con % no repite propiedades en css
+  @extend %max-width;
+}
+
+// Utilizando una variable que es el resultado de usar la funcion invert en otra variable
+h1 {
+  color: $color-invert;
+}
+
+//FUNCIONES
+// Creando una funcion propia suma
+@function suma($numero-uno, $numero-dos) {
+  @return $numero-uno + $numero-dos;
+}
+// usando la funcion como valor de una propiedad
+.div {
+  padding: suma(10px, 5px);
+}
+
+// Definicion de un mapa $fs corto para font size
+$fs : (
+  big: 24px,
+  normal: 16px,
+  small: 14px,
+  x-small: 12px
+);
+
+p {
+  // resultado de la built-in function map-get como valor de la propiedad font-size
+  // la funcion toma el nombre del mapa y el nombre del key como parametros
+  font-size: map-get($fs, normal); //16px
+}
+
+small {
+  font-size: map-get($fs, x-small); //12px
+}
